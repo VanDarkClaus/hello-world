@@ -1,5 +1,5 @@
 <template>
-<mt-header class="hw-header" title="long long long long title">
+<mt-header class="hw-header" :title="headerTitle">
   <div slot="left">
     <mt-button icon="back" @click="goBack()">返回</mt-button>
   </div>
@@ -8,11 +8,16 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
     methods: {
         goBack() {
-            console.log(history.go(-1))
+            history.go(-1)
         }
+    },
+    computed: {
+        ...mapState(['headerTitle'])
     }
 }
 </script>

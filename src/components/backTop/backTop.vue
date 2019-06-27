@@ -27,10 +27,10 @@ export default {
             this.isShow = isShow
         }
     },
+    //自定义指令
     directives: {
         backTop: {
             inserted: function (el, binding) {
-                console.log(binding.value.scrollContainer)
                 document.querySelector(binding.value.scrollContainer).addEventListener('scroll', (e)=>{
                     binding.value.toggleShow(e.target.scrollTop > 600)
                 }, false)

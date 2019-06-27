@@ -22,7 +22,8 @@
                         price: prod.price,
                         title: prod.title,
                         image: prod.image,
-                        amount: 1
+                        amount: 1,
+                        isChecked: true
                     })"
                 >加入购物车</div>
             </div>

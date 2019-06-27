@@ -5,7 +5,9 @@
       <router-view name='header'></router-view>
     </header>
     <main>
-      <router-view/>
+      <keep-alive exclude="shop">
+          <router-view/>
+      </keep-alive>
     </main>
     <footer>
       <!-- 路由底部组件  -->
